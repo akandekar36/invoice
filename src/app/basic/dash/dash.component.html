@@ -1,0 +1,49 @@
+<div class="container">
+
+  <div class="d-flex justify-content-between mb-3">
+    <h4>Invoice List</h4>
+    <!-- <button class="btn btn-primary btn-sm" routerLink="add">Create</button> -->
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Student ID</th>
+        <th>Date</th>
+        <th>Branch</th>
+        <th>Course</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Certificate Issue</th>
+        <th>Invoice Rest</th>
+        <th>Invoice Reference 1</th>
+        <th>Invoice Reference 2</th>
+        <!-- <th>Amount</th> -->
+        <!-- <th>CGST</th> -->
+        <!-- <th>SGST</th> -->
+        <!-- <th>Total Amount</th> -->
+        <!-- <th>TDS</th> -->
+        <th>Net Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let emp of invoice1">
+
+        <tr>
+          <td>{{emp.students}}</td>
+          <td>{{emp.invoicedate}}</td>
+          <td><span *ngFor="let b of branch1">{{ b.id == emp.branchName ? b.branchname : '' }}</span></td>
+          <td><span *ngFor="let b of course1">{{ b.id == emp.courseName ? b.coursename : '' }}</span></td>
+          <td>{{emp.startDate}}</td>
+          <td>{{emp.endDate}}</td>
+          <td>{{ emp.certifiacteIssue ? 'issued' : 'not issued' }}</td>
+          <td>{{emp.invoiceRest}}</td>
+          <td>{{emp.invoiceRef1}}</td>
+          <td>{{emp.invoiceRef2}}</td>
+          <td>{{emp.netAmount | currency:'INR' }}</td>
+
+        </tr>
+
+      </ng-container>
+    </tbody>
+  </table>
+</div>

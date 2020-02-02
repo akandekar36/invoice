@@ -1,0 +1,57 @@
+<h4 class="text-center">Student</h4>
+<div class="row">
+    <div class="container col-sm-6 jumbotron">
+        <form [formGroup]="stuObj" (ngSubmit)="insert()">
+            <div class="form-group">
+                <label class="font-weight-bold">Student Name:</label>
+                <input type="text" formControlName="name" class="form-control" placeholder="Enter student Name">
+            </div>
+            <div class="form-group">
+                <label class="font-weight-bold">Email:</label>
+                <input type="email" formControlName="email" class="form-control" placeholder="Enter EmailID">
+            </div>
+            <div class="form-group">
+                <label class="font-weight-bold">Contact:</label>
+                <input type="number" formControlName="contact" class="form-control" placeholder="Enter Contact">
+            </div>
+            <div class="form-group">
+                <label class="font-weight-bold">Branch:</label>
+                <input type="text" formControlName="branch" class="form-control" placeholder="Enter branch">
+            </div>
+            
+            <div class="form-group">
+                <button type="submit" class="btn btn-outline-primary btn-sm">Submit</button>
+            </div>
+
+
+        </form>
+    </div>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID:</th>
+            <th>Name:</th>
+            <th>Email:</th>
+            <th>Contact:</th>
+            <th>Branch:</th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let stud of student1">
+            <tr>
+                <td>{{stud.id}}</td>
+                <td>{{stud.name}}</td>
+                <td>{{stud.email}}</td>
+                <td>{{stud.contact}}</td>
+                <td>{{stud.branch}}</td>
+                <td>
+                    <!-- <a href="javascript:void(0)" (click)='editstu(stud.id)'>Edit</a> |  -->
+                    <!-- [routerLink]="['edit',emp.id]" -->
+                    <a href="javascript:void(0)" (click)="delete(stud)">Delete</a>
+                    
+                  </td>
+            </tr>
+        </ng-container>
+    </tbody>
+</table>

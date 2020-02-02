@@ -1,0 +1,183 @@
+{
+  "student": [
+    {
+      "id": 1,
+      "name": "Akshay Ambadas Kandekar",
+      "email": "kandekar@gmail.com",
+      "contact": 8548754875,
+      "branch": "hadapsar"
+    },
+    {
+      "id": 2,
+      "name": "Mahendra Lahu Khande",
+      "email": "kande@gmail.com",
+      "contact": 8548754875,
+      "branch": "hadapsar"
+    },
+    {
+      "id": 3,
+      "name": "Amol Tanaji Ghotale",
+      "email": "Ghotale@gmail.com",
+      "contact": 8548754875,
+      "branch": "hadapsar"
+    },
+    {
+      "id": 4,
+      "name": "Onkar Tupe",
+      "email": "dfghjk@gmail.com",
+      "contact": 8545748574,
+      "branch": "jjugyug"
+    }
+  ],
+  "course": [
+    {
+      "id": 1,
+      "coursename": "Angular"
+    },
+    {
+      "id": 2,
+      "coursename": "Full Stack"
+    },
+    {
+      "id": 3,
+      "coursename": "Digital Marketing"
+    },
+    {
+      "id": 4,
+      "coursename": "java"
+    },
+    {
+      "id": 5,
+      "coursename": "MEAN"
+    }
+  ],
+  "branch": [
+    {
+      "id": 1,
+      "branchname": "Hadapsar"
+    },
+    {
+      "id": 2,
+      "branchname": "Aundh"
+    },
+    {
+      "id": 3,
+      "branchname": "Dound"
+    },
+    {
+      "id": 4,
+      "branchname": "Shivaji Nagar"
+    },
+    {
+      "id": 5,
+      "branchname": "Vanavdi"
+    }
+  ],
+  "invoice": [
+    {
+      "students": "1,2",
+      "invoicedate": "2020-01-25",
+      "branchName": 1,
+      "courseName": 1,
+      "startDate": "2019-06-11",
+      "endDate": "2020-01-15",
+      "certifiacteIssue": true,
+      "invoiceRest": "one",
+      "invoiceRef1": "",
+      "invoiceRef2": "",
+      "amount": 500,
+      "cgst": 45,
+      "sgst": 45,
+      "totalAmount": 590,
+      "tds": 50,
+      "netAmount": 540,
+      "id": 1
+    },
+    {
+      "students": "1,3",
+      "invoicedate": "2020-01-17",
+      "branchName": 5,
+      "courseName": 4,
+      "startDate": "2020-01-16",
+      "endDate": "2020-01-08",
+      "certifiacteIssue": true,
+      "invoiceRest": "one",
+      "invoiceRef1": "",
+      "invoiceRef2": "",
+      "amount": 500,
+      "cgst": 45,
+      "sgst": 45,
+      "totalAmount": 590,
+      "tds": 50,
+      "netAmount": 540,
+      "id": 2
+    },
+    {
+      "students": "1,2,3",
+      "invoicedate": "2020-01-25",
+      "branchName": 1,
+      "courseName": 1,
+      "startDate": "2020-01-10",
+      "endDate": "2020-01-16",
+      "certifiacteIssue": true,
+      "invoiceRest": "two",
+      "invoiceRef1": "10015",
+      "invoiceRef2": "",
+      "amount": 500,
+      "cgst": 45,
+      "sgst": 45,
+      "totalAmount": 590,
+      "tds": 50,
+      "netAmount": 540,
+      "id": 3
+    },
+    {
+      "students": "1",
+      "invoicedate": "2020-01-25",
+      "branchName": 3,
+      "courseName": 2,
+      "startDate": "2020-01-17",
+      "endDate": "2020-01-23",
+      "certifiacteIssue": true,
+      "invoiceRest": "three",
+      "invoiceRef1": "120",
+      "invoiceRef2": "120",
+      "amount": 500,
+      "cgst": 45,
+      "sgst": 45,
+      "totalAmount": 590,
+      "tds": 50,
+      "netAmount": 540,
+      "id": 4
+    },
+    {
+      "students": "1",
+      "invoicedate": "2020-02-20",
+      "branchName": "2",
+      "courseName": "1",
+      "startDate": "2020-02-14",
+      "endDate": "2020-02-14",
+      "certifiacteIssue": true,
+      "invoiceRest": "three",
+      "invoiceRef1": "1222322",
+      "invoiceRef2": "1222",
+      "amount": 1000,
+      "cgst": 90,
+      "sgst": 90,
+      "totalAmount": 1180,
+      "tds": 100,
+      "netAmount": 1080,
+      "id": 5
+    }
+  ],
+  "login": [
+    {
+      "uname": "akshay",
+      "pass": "akshay@123"
+    },
+    {
+      "uname": "admin",
+      "pass": "admin@123"
+    }
+  ]
+}

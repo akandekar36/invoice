@@ -1,0 +1,28 @@
+    this._service.getBranch().subscribe(res => {
+      this.branch1 = res.map((bar) => {
+        return ({ ...bar })
+      });
+      console.log(this.branch1);
+
+    });
+
+    this._service.getCourse().subscribe(res => {
+      this.course1 = res.map((cour) => {
+        return ({ ...cour })
+      });
+      console.log(this.course1);
+    });
+
+    this._service.getStudent().subscribe(res=>{
+      this.student1=res.map((stu)=>{
+        return({...stu})
+      });
+    });
+    
+    this._service.getInvoice().subscribe(res => {
+      this.invoice1 = res.map((inv) => {
+        return ({ ...inv })
+      });
+      console.log(this.invoice1);
+    });
+    console.log(this.invoice1);

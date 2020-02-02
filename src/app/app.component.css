@@ -1,0 +1,12 @@
+*{
+ background-image: url("../assets/image/robotic-background-10.jpg");   
+  /* width: 100%; */
+}
+h1,h2,h3,h4,h5,h6{
+    color: aliceblue;
+
+}
+button{
+    color: aliceblue;
+}
+

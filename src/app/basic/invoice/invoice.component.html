@@ -1,0 +1,120 @@
+<h4 class="text-center">Invoice</h4>
+<div class="row">
+  <div class="container col-sm-6 jumbotron">
+    <form [formGroup]="invoiceObj2" (ngSubmit)="register()">
+      <div class="form-group">
+        <label class="font-weight-bold">Student Name:</label>
+
+        <select formControlName="students" class="form-control" multiple>
+          <option value="">Select Student</option>
+          <option *ngFor="let student of student1" [value]="student.id" >{{student.name | titlecase}}</option>
+        </select>
+      </div>
+      <!-- <div *ngIf="invoiceObj.controls['student_name'].errors.required && invoiceObj2.controls['student_name'].touched">Select student</div> -->
+      <div class="form-group">
+        <label class="font-weight-bold">Date:</label><br>
+        <input type="date" formControlName="invoicedate" class="form-control">
+      </div>
+      <!-- <div *ngIf="invoiceObj.controls['current_date'].errors.required">Select date</div> -->
+      <div class="form-group">
+        <label class="font-weight-bold">Branch Name:</label>
+        <select formControlName="branchName" class="form-control">
+          <option value="">Select Branch</option>
+          <option *ngFor="let bran of branch1" [value]="bran.id">{{bran.branchname | titlecase}}</option>
+        </select>
+      </div>
+      <!-- <div *ngIf="invoiceObj.controls['branch_name'].errors.required">Select branch</div> -->
+      <div class="form-group">
+        <label class="font-weight-bold">Course Name:</label>
+        <select formControlName="courseName" class="form-control">
+          <option value="">Select Course</option>
+          <option *ngFor="let cour of course1" [value]=cour.id>{{cour.coursename| titlecase}}</option>
+        </select>
+      </div>
+      <!-- <div *ngIf="invoiceObj.controls['course_name'].errors.required">Select course</div> -->
+      <div class="form-group">
+        <label class="font-weight-bold">Course Start Date:</label><br>
+        <input type="date" formControlName="startDate" class="form-control">
+      </div>
+      <!-- <div *ngIf="invoiceObj.controls['start_date'].errors.required">Select start date</div> -->
+
+      <div class="form-group">
+        <label class="font-weight-bold">Course End Date:</label><br>
+        <input type="date" formControlName="endDate" class="form-control">
+      </div>
+      <!-- <div *ngIf="invoiceObj.controls['end_date'].errors.required">Select end_date</div> -->
+
+      <div class="form-group">
+        <label class="font-weight-bold">Certificate issue:</label><br>
+        <input type="checkbox" formControlName="certifiacteIssue">Yes
+      </div>
+      <!-- <div *ngIf="invoiceObj.controls['yesno'].errors.required">Issue or not</div> -->
+
+      <div class="form-group">
+        <label class="font-weight-bold">Invoice Rest:</label><br>
+        <select formControlName="invoiceRest" class="form-control" (click)="select()">
+          <option value="">Select rest</option> 
+          <option value="one">1</option>
+          <option value="two">2</option>
+          <option value="three">3</option>
+        </select>
+      </div>
+      <!-- <div *ngIf="invoiceObj.controls['in_rest'].errors.required">Select rest</div> -->
+
+
+      <div class="form-group">
+        <label class="font-weight-bold" [hidden]=ds>Invoice previous number:</label><br>
+        <input formControlName="invoiceRef1" type="text" [hidden]=ds placeholder="Enter invoice1 Number" class="form-control">&nbsp;
+        <input formControlName="invoiceRef2" type="text" [hidden]=ds1 placeholder="Enter invoice2 Number" class="form-control">
+
+      </div>
+      <!-- <div *ngIf="invoiceObj.controls['course_name'].errors.required">Select course</div> -->
+      <!-- <div *ngIf="invoiceObj.controls['course_name'].errors.required">Select course</div> -->
+
+
+      <div class="form-group">
+        <label class="font-weight-bold" >Invoice Amount:</label><br>
+        <input type="number" formControlName="amount" class="form-control" placeholder="Enter amount"  (keyup)="calculate()" />
+      </div>
+      <!-- <div *ngIf="invoiceObj.controls['in_amt'].errors.required">Enter invoice amount</div> -->
+
+
+
+      <div class="form-group">
+        <label class="font-weight-bold">CGST:</label><br>
+        <input  type="text" formControlName="cgst" placeholder="Enter CGST" class="form-control" readonly>
+      </div>
+      <!-- <div *ngIf="invoiceObj.controls['cgst'].errors.required">Enter amount</div> -->
+
+      <div class="form-group">
+        <label class="font-weight-bold">SGST:</label><br>
+        <input  type="text" formControlName="sgst" placeholder="Enter SGST" class="form-control" readonly>
+      </div>
+      <!-- <div *ngIf="invoiceObj.controls['sgst'].errors.required">Enter amount</div> -->
+
+
+      <div class="form-group">
+        <label class="font-weight-bold">Total Invoice Amount:</label><br>
+        <input  type="text" formControlName="totalAmount" placeholder="Enter Total invoice" class="form-control" readonly>
+      </div>
+
+      <div class="form-group">
+        <label class="font-weight-bold">TDS:</label><br>
+        <input  type="text" formControlName="tds" placeholder="Enter TDS" class="form-control" readonly>
+      </div>
+      <!-- <div *ngIf="invoiceObj.controls['tds'].errors.required">Enter amount</div> -->
+
+
+      <div class="form-group">
+        <label class="font-weight-bold">Net Receive:</label><br>
+        <input  type="text" formControlName="netAmount" placeholder="Enter net value" class="form-control" readonly>
+      </div>
+      <!-- <div *ngIf="invoiceObj.controls['net_receive'].errors.required">Enter amount</div> -->
+
+      <div class="form-group">
+        <button type="submit" class="btn btn-outline-primary btn-sm" [disabled]="invoiceObj2.invalid">Submit</button>
+      </div>
+    </form>
+    <p>{{invoiceObj2.value | json}}</p>
+  </div>
+</div>
